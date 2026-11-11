@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: #09090b;
+  color: #f8fafc;
+}
+
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.graph-grid {
+  background-color: #0c0c10;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.codebase-node {
+  display: flex;
+  width: 200px;
+  min-height: 55px;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: rgba(21, 21, 27, 0.96);
+  padding: 11px 12px;
+  color: #d4d4d8;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.24);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.codebase-node:hover {
+  border-color: rgba(167, 139, 250, 0.65);
+  box-shadow: 0 8px 30px rgba(91, 33, 182, 0.28);
+  transform: translateY(-2px);
+}
+
+.codebase-node-react {
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.codebase-node-script {
+  border-color: rgba(59, 130, 246, 0.28);
+}
+
+.codebase-node-dot {
+  height: 8px;
+  width: 8px;
+  flex: 0 0 auto;
+  border-radius: 9999px;
+  background: #60a5fa;
+  box-shadow: 0 0 10px rgba(96, 165, 250, 0.75);
+}
+
+.codebase-node-react .codebase-node-dot {
+  background: #a78bfa;
+  box-shadow: 0 0 10px rgba(167, 139, 250, 0.75);
+}
+
+.codebase-node-label {
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.codebase-node-extension {
+  color: #71717a;
+  font-size: 10px;
+}
